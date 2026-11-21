@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: comeon-studio/come-on-studio
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "ja"
+
+collections:
+  - name: "news"
+    label: "NEWS"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "BLOG"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "本文", name: "body", widget: "markdown" }
