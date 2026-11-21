@@ -1,0 +1,1 @@
+window.KAMASTA_POSTS = [];
